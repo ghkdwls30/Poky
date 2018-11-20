@@ -21,3 +21,13 @@ npm start
 6. react build 와치 실행
 fornt 폴더로 이동
 npm run wathch
+dist 폴더에 업데이트 됨.
+
+# GIT 클론 후 할일
+의존성 다운로드
+front, server 폴더 이동 후 각각 아래 명령어 실행 
+npm install
+
+# 배포
+잘 모르겠다. 정의가 필요함.
+
