@@ -6,7 +6,7 @@ var logger = require('morgan');
 //var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var apisRouter = require('./routes/apis');
 
 var app = express();
 
@@ -28,13 +28,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './../front/dist')));
 
 app.use('/', indexRouter);
-app.use('/api', usersRouter);
-
+app.use('/apis', apisRouter);
 
 // URL 직접 주소 변경시 항상 index.html 보내 줌.
 app.get('/*', (req,res) => {
     res.sendfile(path.join(__dirname, './../front/dist/index.html'))
 })
+
 
 
 // catch 404 and forward to error handler
